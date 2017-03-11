@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}{{this.title }}{% endblock %}
+{% block heading %}{{this.heading}}{% endblock %}
+{% block subheading %}{{this.subheading}}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{ this.body }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

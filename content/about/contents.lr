@@ -1,0 +1,14 @@
+model: page
+---
+title: About
+---
+heading: Who am I?
+---
+subheading: A Bit About Me
+---
+body:
+###Professionally### 
+I'm an HPC administrator at CU Boulder's BioFrontiers Institute.  I take pride in coming up with solutions that fit the needs of the researchers I support.  Currently my main roles include keeping a few clusters up-to-date, managing storage, and looking over other general infrastructure.  I also co-host the Sysadministrivia podcast (NSFW).  The podcast is great for interacting with others in the field, as well as learning just a little bit about everything when it comes time to cover it on the show.  Check us out sometime!  I believe in learning by doing, so in general if I see the opportunity to help out with an open source project or something, I try to jump in.  In general, if you want to see my most up-to-date list of accomplishments I recommend you check out my resume or LinkedIn.
+
+###Personally###
+I'm an aspiring potter (sort of) -- I'm not going to quit my day job for it, but it's probably the most relaxing thing I've found to do when I'm not staring at a computer.  Check out my gallery and let me know if you like something.  My other hobbies include brewing and drinking plenty of beer, hitting up trivia nights at the local bars, and spending time outside when the weather calls for it.  I go by jthan on Freenode and jrdemasi most other places.  Also, I like to think I'm pretty approachable, so I would always encourage you to reach out if you have any questions.  
