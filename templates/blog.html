@@ -1,12 +1,18 @@
 {% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block heading %}{{ this.heading }}{% endblock %}
+{% block subheading %}{{ this.subheading }}{% endblock %}
 {% from "macros/blog.html" import render_blog_post %}
 {% from "macros/pagination.html" import render_pagination %}
-{% block title %}{{ this.title }}{% endblock %}
-{% block tagline %} {{ this.tagline }} {% endblock %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 {% block body %}
   {% for child in this.pagination.items %}
     {{ render_blog_post(child, from_index=true) }}
   {% endfor %}
-
   {{ render_pagination(this.pagination) }}
+            </div>
+        </div>
+    </div>
 {% endblock %}
