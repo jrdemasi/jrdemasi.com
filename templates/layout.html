@@ -60,11 +60,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {% if not this.parent.path == '/blog' %}
                     <div class="site-heading">
                         <h1>{% block heading %}{% endblock %}</h1>
                         <hr class="small">
                         <span class="subheading">{% block subheading %} {% endblock %}</span>
                     </div>
+                    {% else %}
+                    <div class="post-heading">
+                        <h1>{{this.title}}</h1>
+                        <h2 class="subheading">{{this.subtitle}}</h2>
+                        <span class="meta">Posted by {{this.author}} on {{this.pub_date}}</span>
+                    {% endif %}
                 </div>
             </div>
         </div>
