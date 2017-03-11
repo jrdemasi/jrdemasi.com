@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% from "macros/blog.html" import render_blog_post %}
 {% block title %}{{ this.title }}{% endblock %}
+{% block heading %}{{ this.title }}{% endblock %}
+{% block subheading %}{{ this.subtitle }} {% endblock %}
+{% block meta %}Posted by {{ this.author }} on {{ this.pub_date }}{% endblock %}
 {% block body %}
   {{ render_blog_post(this) }}
 {% endblock %}

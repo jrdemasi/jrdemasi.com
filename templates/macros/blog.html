@@ -12,17 +12,10 @@
                                 {{ post.subtitle }}
                             </h3>
                             </a>
+                                <p class="post-meta">Posted by {{ post.author }} on {{ post.pub_date }}</p>
                             {% else %}
-                            <a href="#">
-                            <h2 class="post-title">
-                                {{ post.title }}
-                            </h2>
-                            <h3 class="post-subtitle">
-                                {{ post.subtitle }}
-                            </h3>
-                            </a>
+                            {{ post.body }}
                         {% endif %}
-                    <p class="post-meta">Posted by {{ post.author }} on {{ post.pub_date }}</p>
                 </div>
             </div>
         </div>
