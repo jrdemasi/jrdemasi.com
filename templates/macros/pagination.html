@@ -1,19 +1,26 @@
 {% macro render_pagination(pagination) %}
+    <ul class="pager">
     {% if pagination.has_prev %}
         <!-- Pager -->
-            <ul class="pager">
                 <li class="previous">
                     <a href="{{ pagination.prev|url }}">&larr; Newer Posts</a>
                 </li>
-            </ul>
+    {% else %}
+                <li class="disabled previous">
+                    <a href="javascript:void(0)" tabindex="-1">&larr; Newer Posts</a>
+                </li>
     {% endif %}
     <!--| {{ pagination.page }} | -->
     {% if pagination.has_next %}
         <!-- Pager -->
-            <ul class="pager">
                 <li class="next">
                     <a href="{{ pagination.next|url }}">Older Posts &rarr;</a>
                 </li>
-            </ul>
+    {% else %}
+        <!-- Pager -->
+                <li class="disabled next">
+                    <a href="javascript:void(0)" tabindex="-1">Older Posts &rarr;</a>
+                </li>
     {% endif %}
+    </ul>
 {% endmacro %}
