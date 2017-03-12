@@ -13,6 +13,7 @@
                             </h3>
                             </a>
                                 <p class="post-meta">Posted by {{ post.author }} on {{ post.pub_date }}</p>
+                                <hr>
                             {% else %}
                             {{ post.body }}
                             <div class="comments">{{ render_disqus_comments() }}</div>
