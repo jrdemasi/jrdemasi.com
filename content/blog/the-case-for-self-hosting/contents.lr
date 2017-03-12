@@ -1,0 +1,25 @@
+title: The case for self hosting
+---
+subtitle: It's a lot of work, but...
+---
+pub_date: 2017-03-15
+---
+author: Jonathan DeMasi
+---
+published: false
+---
+body:
+Anyone who knows me or has listened to me on Sysadministrivia knows that I am a **huge** proponent of self-hosting as many services as possible.  The line between "this is worth the effort" and "I could spend less money outsourcing this" is blurry for me.  There are times when it's appropriate to pay for something instead of rolling your own solution.  For example, if you're just starting a small company and need a virtual infrastructure, I'm willing to bet you don't want to spend the majority of your time maintaining KVM and associated storage.  That's not to say maintaining KVM is hard, but it certainly takes more effort than using VMWare or something of the like where most of the work is done for you.  But one of the main reasons I don't like using someone else's solution is because I tend to lack the understanding needed to fix it when something goes wrong.  When you build something yourself, be it a website, virtual machine infrastructure, or storage appliance, you know every ounce of effort that went into it and generally know exactly how it's configured.  Another example is using [Rocks](http://www.rocksclusters.org/wordpress/) to build a cluster instead of configuring it from scratch.  Rocks might be ideal for standing up your first compute cluster or if you're in a situation where the cluster needs to be stood up fast and is temporary, but at the end of the day that doesn't make it *your* cluster.  
+
+Alright enough rambling.  What I really want to talk about is self-hosting SIMPLE services - services that are so trivial to setup and maintain that to me it's hard to justify not doing it on my own.  These are based on my experiences and reflect my opinions. For each service I'm going to mention **why** I think it's worth self-hosting, and try to provide some insight into what can happen if you don't.  
+
+####Git####
+I actually don't hate GitHub or GitLab as much as some others may, but I do think there are some fundamental reasons you may want to consider using an in-house solution.  The most obvious reasons are:
+1. You can't keep an unlimited number of private repositories on either platform, and even if you can, how private is something you're storing on someone else's computer?
+2. In the event that GitHub, GitLab, or any other service you're using experiences a security breach or some kind of data loss, that could your data at risk.  That being said, the same thing can happen to your own instance of git if you don't secure it properly, keep backups, etc.  For example, when [GitLab experienced data loss](https://www.theregister.co.uk/2017/02/01/gitlab_data_loss/) there was a lot of fear that some customers would lose some work.  Fortunately, GitLab engineers were able to recover the data and they were very transparent, which I applaud!  
+3. If you're trying to use a lot of custom hooks, having your repositories hosted within your own environment is VERY handy.  Seriously, being able to setup keys and just use rsync to update something on a push can make for some killer workflows.  
+4. This is sort of inline with #1, but if you're using git for something sensitive like storing your [Pass](https://www.passwordstore.org/) stores, there's no way you should be off siting that.  Yes, the files are gpg-encrypted.  No, I still do not think it's a good idea to put them on GitHub.  
+5. Lastly, it's really easy to stand something like [Gitolite](http://gitolite.com/) up, and if you need some shiny-clicky GitHub-like experience, it's really easy to stand up your own instance of [GitLab](https://about.gitlab.com/).  At my job, we use GitLab because it's easy to maintain, yet still offers a web interface which is often desirable for our end-users.  We can run it wherever we like, and we handle the backups.  I'm confident in the solution because I maintain it myself.  
+
+####VPN Solutions####
+This is something that seems intimidating to people, but in reality if you've ever done it you realize how easy it is.  

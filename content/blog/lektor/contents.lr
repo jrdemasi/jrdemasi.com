@@ -1,0 +1,28 @@
+title: Lektor
+---
+subtitle: My trials and tribulations with a static "CMS"
+---
+pub_date: 2017-03-12
+---
+author: Jonathan DeMasi
+---
+published: true
+---
+body:
+####What the hell is Lektor?####
+Lektor is a static content management system.  At a surface level, though, what does that mean?  Well, a static site is one that only relies on static files to display its content (mostly -- Javascript kind of breaks this definition/rule, but the processing that happens there is client-side).  So, with an entirely static site there are no databases, there's no dynamic content.  Things are generated, or preprocessed, ahead of time and then made into static files to be served.  I think Lektor gets "content management system" from the fact that it has a development server you can deploy on your local machine and interact with an admin interface to create new pages, modify content, etc.  I can tell you up front that I tried the admin interface a bit, but realistically was not a fan and didn't use it.  It's much quicker and easier in my opinion to copy a folder with a few files in it and modify it to reflect new content than click around some web interface.  That being said, if one were trying to setup a static site but needed a "non-techie" sort of person to edit the content, the admin interface would probably be invaluable.
+
+####Why Lektor, Jonathan?#### 
+So I told you a bit about what Lektor *is*, but why am I using it?  There are a few reasons, but a few that really stuck out to me and made me pretty interested in trying Lektor (or any static content generator, for that matter).  These are in no apparent order, but if I had to choose a #1 reason for using a static content generator, it'd probably be some combination of 1 and 2.  
+1. When there are no databases or crazy backend things happening on a web server, it's a lot harder to compromise.  There's no opportunity for things like SQL injection, brute-forcing admin credentials for login, etc.
+2. It's just simple.  I created a few templates, utilized a theme I found on the Internet, and my site was up and running in no time.  
+3. There's almost no overhead to running a static site.  Yes, I am still running a web server (Nginx, to be exact).  No, I am not running MySQL, complicated PHP processes, etc.
+4. Since my entire site is made from primarily flat files into other flat files by way of Lektor, it's very easily kept in git, and THAT is awesome.
+
+####What are the negatives?####
+So, along with this simplicity comes some obvious drawbacks. Dynamic content can be extremely powerful, and having easy integration with and accesss to a database is immensely useful at times.  If you'll look at the bottom of this page, you'll notice I'm using Disqus for comments.  Why?  Well, because I don't have a database on my own machine to store comments.  This means I'm somewhat reliant on Javascript components for integration of things like Disqus.  This is generally not something I'd be cool with, but I am trying to give it a chance and go with the flow.  If it ends up becoming unbearable for me to "outsource" in this way, I will resort to building a site out in Flask with a database backend.  Another negative, though a small one, is that every time you make a change to your project you have to rebuild the static content.  This takes almost no time at all, and if you take the time to set it up right, it should be on or two simple steps.  It's still something to keep in mind though.  You can't log in to your website anywhere and just quickly fix a typo or make a new post. 
+
+####Conclusions####
+I was pleasantly surprised that I was able to get this entire site stood up in roughly four hours.  I think that most people appreciate the shiny of something like WordPress or Drupal, but at the end of the day, if you're just trying to maintain a simple site, you'd be doing yourself a service to consider a static content generator.  I like Lektor enough that I am interested in potentially working on the project if I have the time.  Python3 is not officially supported, though the functionality exists and should be in the next release.  As soon as that hits, I will probably fork the repo and try to tackle a few bugs to become more intimate with Lektor.  The community seems to be an interesting mix of people who are die hard users, fans, and developers while others are just clueless as to how to leverage Lektor.  
+
+I would also consider trying an alternative static content generator, but I really like that Lektor uses Jinja2 for templating.  In general, it feels very Pythonic and reminds me a lot of developing in Flask which I've used for several other projects.  I admit that for me, letting things like comments to someone outside of myself (e.g. Disqus in this case) is really difficult.  I'm a very DIY kind of guy whenever I can be, and I know I have written that type of functionality before.  

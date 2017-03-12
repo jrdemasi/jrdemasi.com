@@ -6,13 +6,14 @@
 {% from "macros/pagination.html" import render_pagination %}
 {% block body %}
   {% for child in this.pagination.items %}
-    {{ render_blog_post(child, from_index=true) }}
+        {% if child.published %}
+            {{ render_blog_post(child, from_index=true) }}
+        {% endif %}
   {% endfor %}
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-  {{ render_pagination(this.pagination) }}
+                {{ render_pagination(this.pagination) }}
             </div>
         </div>
     </div>
