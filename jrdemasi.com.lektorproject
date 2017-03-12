@@ -1,2 +1,5 @@
 [project]
 name = jrdemasi.com
+
+[packages]
+lektor-disqus-comments = 0.2
