@@ -1,0 +1,16 @@
+title: Good to be Back!
+---
+subtitle: A real website exists once again
+---
+pub_date: 2017-03-11
+---
+author: Jonathan DeMasi
+---
+body:
+####What, a website!?####
+It's no surprise that for a LONG time my domain basically was only used for internal things.  There was no front-facing website or anything.  This is fine by me, because honestly while I was in college and such, the idea of maintaining a blog and all that didn't really sound too appealing.  But I'm back!  With the advent of [Sysadministrivia](http://sysadministrivia.com) it seemed like having a web presence was important again.
+
+####Moving Forward####
+I have a few things brewing for this site moving forward, or perhaps some extentions of it.  For one, I'd like to make a gallery to showcase my pottery.  For one thing, I always end up sending pictures of my stuff to friends and family anyway.  For another, though, I am starting to accumulate too much pottery of my own!  I only have so many uses for certain types of decorative pieces and such, so I am hoping that maybe I can start to sell some of it.  So, that being said, everything in the gallery will clearly be labeled as "for sale" or "unavailable."  If you're interested in a piece that's for sale, please contact me and we'll work something out until I have a proper means for taking your money.  In general, though, I will usually only ask for the cost of shipping and anything you want to donate on top of it.  
+
+The other thing I'm planning to do is stand up cgit.  I'll have a post to come soon on self-hosting (code, websites, etc.), but for now, suffice it to say that I prefer to self-host as much as I can.  Along those lines, though, I think having a way for others to visualize my repositories and such would be useful, and for what it's worth, I usually mirror repositories that aren't at all sensitive on [GitHub](https://github.com/jrdemasi) just in case something were to happen to my [Linode](https://www.linode.com).  Hopefully this, plus writing about my experiences, proves to be a useful endeavor for me to showcase my work and share with others.
